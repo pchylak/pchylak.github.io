@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,26 +13,35 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://cloudinsights.blog/2022/05/02/hello-world/"/>
+    <link rel="canonical" href="http://cloudinsights.blog/2022/03/26/iaac-environment-part1/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="Infrastructure as a Code Series. In this series I&#39;ll show how to start with IaaC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://cloudinsights.blog/2022/05/02/hello-world/index.html">
+<meta property="og:title" content="IaaC - Environment preparation - Part 1">
+<meta property="og:url" content="http://cloudinsights.blog/2022/03/26/iaac-environment-part1/index.html">
 <meta property="og:site_name" content="Pawel Chylak Blog">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
-<meta property="og:locale">
-<meta property="article:published_time" content="2022-05-01T22:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-14T21:44:20.816Z">
+<meta property="og:description" content="Infrastructure as a Code Series. In this series I&#39;ll show how to start with IaaC">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-26T09:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-15T20:35:16.317Z">
 <meta property="article:author" content="Pawel Chylak">
-<meta property="article:tag" content="Injury">
-<meta property="article:tag" content="Fight">
-<meta property="article:tag" content="Shocking">
+<meta property="article:tag" content="Infrastructure as a Code">
+<meta property="article:tag" content="Public Cloud">
 <meta name="twitter:card" content="summary">
     
+    
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJS7XJFX8S"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NJS7XJFX8S');
+        </script>
     
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
@@ -43,9 +52,9 @@
     
     <title>
         
-            Hello World -
+            IaaC - Environment preparation - Part 1 -
         
-        Pawel Chylak - Blog
+        Cloud Insights
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
@@ -63,8 +72,8 @@
     
     <script id="hexo-configurations">
     let Global = window.Global || {};
-    Global.hexo_config = {"hostname":"cloudinsights.blog","root":"/","language":"pl"};
-    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[""]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":false,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/pchylak/","Blog":"https://chylak.blog"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.hexo_config = {"hostname":"cloudinsights.blog","root":"/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"14px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[""]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":false,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":"G-NJS7XJFX8S"}},"home_banner":{"enable":false,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"CloudInsights.Blog","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/pchylak/","instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.1.3","navbar":{"auto_hide":false,"color":{"left":"#0743ab","right":"#007fff","transparency":99},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
     Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
     
@@ -85,7 +94,8 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Pawel Chylak Blog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -115,7 +125,7 @@
             
             <a class="logo-title" href="/">
                 
-                Pawel Chylak - Blog
+                Cloud Insights
                 
             </a>
         </div>
@@ -154,41 +164,6 @@
                                     
                                 </a>
                                 <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class="has-dropdown" 
-                                    href="#" onClick="return false;">
-                                    
-                                        
-                                            <i class="fa-regular fa-user"></i>
-                                        
-                                        ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
-                                    
-                                </a>
-                                <!-- Submenu -->
-                                
-                                    <ul class="sub-menu">
-                                    
-                                        <li>
-                                        <a href="/about">ME
-                                        </a>
-                                        </li>
-                                    
-                                        <li>
-                                        <a target="_blank" rel="noopener" href="https://github.com/pchylak/">GITHUB
-                                        </a>
-                                        </li>
-                                    
-                                        <li>
-                                        <a target="_blank" rel="noopener" href="https://chylak.blog">BLOG
-                                        </a>
-                                        </li>
-                                    
-                                    </ul>
                                 
                             </li>
                     
@@ -245,35 +220,6 @@
                     <!-- Submenu -->
                     
             
-                
-                    <li class="drawer-navbar-item flex-center">
-                        <a class="has-dropdown" 
-                        href="#" onClick="return false;">
-                            
-                                
-                                    <i class="fa-regular fa-user"></i>
-                                
-                                ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
-                            
-                        </a>
-                    </li>
-                    <!-- Submenu -->
-                              
-                        
-                            <li class="dropdown-item flex-center">
-                                <a class="dropdown-item" href="/about">ME</a>
-                            </li>
-                        
-                            <li class="dropdown-item flex-center">
-                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/pchylak/">GITHUB</a>
-                            </li>
-                        
-                            <li class="dropdown-item flex-center">
-                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://chylak.blog">BLOG</a>
-                            </li>
-                        
-                    
-            
 
         </ul>
     </div>
@@ -299,7 +245,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">Hello World</h1>
+                    <h1 class="article-title-regular">IaaC - Environment preparation - Part 1</h1>
                 </div>
             
                 
@@ -321,15 +267,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2022-05-02</span>
-        <span class="mobile">2022-05-02 00</span>
+        <span class="desktop">2022-03-26 10:00</span>
+        <span class="mobile">2022-03-26 10</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-05-14 23:44:20</span>
-            <span class="mobile">2023-05-14 23:44</span>
+            <span class="desktop">2023-05-15 22:35:16</span>
+            <span class="mobile">2023-05-15 22:35</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -340,11 +286,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Sports/">Sports</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/Baseball/">Baseball</a>&nbsp;
+                        <a href="/categories/Microsoft-Azure/">Microsoft Azure</a>&nbsp;
                     </li>
                 
             </ul>
@@ -356,15 +298,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Injury/">Injury</a>&nbsp;
+                        <a href="/tags/Infrastructure-as-a-Code/">Infrastructure as a Code</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/Fight/">Fight</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/Shocking/">Shocking</a>&nbsp;
+                        | <a href="/tags/Public-Cloud/">Public Cloud</a>&nbsp;
                     </li>
                 
             </ul>
@@ -387,59 +325,39 @@
             
 
             <div class="article-content markdown-body">
-                <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <p>Infrastructure as a Code series. In this series, I’ll try to present all aspects of working with IaaC, starting with preparation of the work environment. </p>
+<span id="more"></span>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Why to use Infrastructure as a Code? </p>
+<p>My first think is: to reduce natural human mistakes. Second is that I’m little lazy and I like to use some automations in my work, so scripts, bicep and ARM templates are very helpful in this aspect. </p>
+<p>Every resource can be defined by template, image or script - when we need to create or update resources we are using prepared templates and fill only parameter values.<br>In public cloud one mistake can cost a lot of money so… let’s start.</p>
+<p>If You are starting with Infrastructure as a Code, You’ll need ready environment to work with templates, images, etc.<br>The main goal of this article is creating that environment.<br>This part describes how to configure Windows 10&#x2F;11 OS client.</p>
+<h1 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h1><p>In first step I’ll use chocolatey as package provider for Windows 10&#x2F;11. After installation we need to restart Powershell Console or Terminal.</p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass <span class="literal">-Scope</span> <span class="keyword">Process</span> <span class="literal">-Force</span>; </span><br><span class="line">[<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol = [<span class="type">System.Net.ServicePointManager</span>]::SecurityProtocol <span class="operator">-bor</span> <span class="number">3072</span>; </span><br><span class="line"><span class="built_in">iex</span> ((<span class="built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="string">&#x27;https://community.chocolatey.org/install.ps1&#x27;</span>)) </span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<p>Second step is installation of Visual Studio Code, Azure Cli and Docker</p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">choco install vscode <span class="literal">-y</span></span><br><span class="line">choco install azure<span class="literal">-cli</span> <span class="literal">-y</span></span><br><span class="line">choco install docker<span class="literal">-desktop</span> <span class="literal">-y</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>Next step is installing Visual Studio Code extensions for Bicep, Terraform, Powershell</p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">code <span class="literal">--install-extension</span> ms<span class="literal">-azuretools</span>.vscode<span class="literal">-bicep</span>; </span><br><span class="line">code <span class="literal">--install-extension</span> ms<span class="literal">-azuretools</span>.vscode<span class="literal">-azureterraform</span> </span><br><span class="line">code <span class="literal">--install-extension</span> ms<span class="literal">-vscode</span>.azure<span class="literal">-account</span> </span><br><span class="line">code <span class="literal">--install-extension</span> ms<span class="literal">-vscode</span>.powershell </span><br><span class="line">code <span class="literal">--install-extension</span> redhat.vscode<span class="literal">-yaml</span></span><br><span class="line">code <span class="literal">--install-extension</span> ms<span class="literal">-azuretools</span>.vscode<span class="literal">-docker</span> </span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>After installation You can start work with templates, images, scripts.</p>
+<h1 id="Updates"><a href="#Updates" class="headerlink" title="Updates"></a>Updates</h1><p>Everything You can update by using:</p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco update [<span class="type">Package</span> <span class="type">Name</span>]</span><br></pre></td></tr></table></figure></div>
+<h1 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h1><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/pchylak/inCloud.blog/blob/main/IaaC/WindowsEnvScript.md" >Github Repo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
             </div>
 
-            
-                <div class="post-copyright-info">
-                    <div class="article-copyright-info-container">
-    <ul>
-        <li><strong>Title:</strong> Hello World</li>
-        <li><strong>Author:</strong> Pawel Chylak</li>
-        <li><strong>Created at:</strong> 2022-05-02 00:00:00</li>
-        
-            <li>
-                <strong>Updated at:</strong> 2023-05-14 23:44:20
-            </li>
-        
-        <li>
-            <strong>Link:</strong> https://chylak.blog/2022/05/02/hello-world/
-        </li>
-        <li>
-            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
-        </li>
-    </ul>
-</div>
-
-                </div>
             
 
             
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Injury/">#Injury</a>&nbsp;
+                            <a href="/tags/Infrastructure-as-a-Code/">#Infrastructure as a Code</a>&nbsp;
                         </li>
                     
                         <li class="tag-item">
-                            <a href="/tags/Fight/">#Fight</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/Shocking/">#Shocking</a>&nbsp;
+                            <a href="/tags/Public-Cloud/">#Public Cloud</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -447,6 +365,26 @@
 
             
 
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2022/05/02/iaac-bicep-intro/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">IaaC - Azure Bicep - First steps</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                </div>
             
 
 
@@ -458,8 +396,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">IaaC - Environment preparation - Part 1</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Configuration"><span class="nav-text">Configuration</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Updates"><span class="nav-text">Updates</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Links"><span class="nav-text">Links</span></a></li></ol>
 
     </div>
 </div>
@@ -583,6 +521,15 @@
 
         <!-- rss -->
         
+            <li class="right-bottom-tools rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                <i class="fa-regular fa-rss"></i>
+                </a>
+            </li>
+        
 
         
 
@@ -698,6 +645,13 @@
 <script src="/js/plugins/typed.js"></script>
 
 
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
 
 
 
