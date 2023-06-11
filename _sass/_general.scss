@@ -3,6 +3,7 @@
  * ----------------------------------------------------------------------------
  */
 html {
+  background-color: whitesmoke;
   font-family: $font-primary;
   font-size: 112.5%;
   height: 100%;
@@ -10,6 +11,7 @@ html {
 }
 
 body {
+  height: 100%;
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
