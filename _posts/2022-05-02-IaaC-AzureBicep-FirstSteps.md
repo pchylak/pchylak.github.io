@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 'IaaC - Azure Bicep - First steps'
+title: 'IaC - Azure Bicep - First steps'
 tags: [Infrastructure as a Code, Microsoft Azure, Azure Bicep]
 featured_image_thumbnail: 
 featured_image: assets/images/posts/2022/FeaturedImage3.jpg
 ---
 
-Infrastructure as a Code series. In this series, I'll try to present all aspects of working with IaaC, starting with preparation of the work environment. 
+Infrastructure as a Code series. In this series, I'll try to present all aspects of working with IaC, starting with preparation of the work environment. 
 <!--more-->
 
 # Benefits of using Azure Bicep

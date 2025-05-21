@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'IaaC - Environment preparation - Part 1'
+title: 'IaC - Environment preparation - Part 1'
 tags: [Infrastructure as a Code, Microsoft Azure]
 featured_image_thumbnail: 
 featured_image: assets/images/posts/2022/FeaturedImage3.jpg
