@@ -3,7 +3,7 @@ layout: post
 title: 'Microsoft Azure - Attribute-based access control'
 tags: [Microsoft Azure]
 featured_image_thumbnail: 
-featured_image: assets/images/posts/2022/FeaturedImage2.jpg
+featured_image: assets/images/posts/2022/FeaturedImage3.jpg
 hidden: false
 ---
 
