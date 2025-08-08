@@ -1,11 +1,16 @@
 ---
 layout: post
 title: 'Microsoft Azure - Containers'
-tags: [Microsoft Azure]
-featured_image_thumbnail: 
-featured_image: assets/images/posts/2022/FeaturedImage2.jpg
+tags: 
+  - Microsoft Azure
+date: 2023-06-09
+categories: 
+  - Blog
+image: /assets/img/posts/2023/MicrosoftAzure-Containers.png
 hidden: false
 ---
+* toc
+{:toc .large_only}
 
 Microsoft Azure Services overview.
 <!--more-->
@@ -20,24 +25,22 @@ Azure Container Instances (ACI) is a service provided by Microsoft Azure. It all
 
 ### Azure Kubernetes Service
 
-Azure Kubernetes Service (AKS) is a Microsoft implementation of popular open-source platform Kubernetes (K8s) that is a container orchestration platform. It siplifiy deployment and management of containerized applications on large scale. AKS orchestrates a cluster of virtual machines, schedules containers, traks the health of resources in cluster. 
+Azure Kubernetes Service (AKS) is a Microsoft implementation of popular open-source platform Kubernetes (K8s) that is a container orchestration platform. It siplifiy deployment and management of containerized applications on large scale. AKS orchestrates a cluster of virtual machines, schedules containers, traks the health of resources in cluster.
 
-AKS is provided as a platform service, meaning Microsoft will manage key components like Scheduler, API Server and Controler Manager. As a customer/user You can manage nodes, podes and other elements. 
+AKS is provided as a platform service, meaning Microsoft will manage key components like Scheduler, API Server and Controler Manager. As a customer/user You can manage nodes, podes and other elements.
 
-|![AKS Azure](assets/images/posts/2023/control-plane-and-nodes.png)|
+|![AKS Azure](/assets/img/posts/2023/control-plane-and-nodes.png)|
 | -- |
-| Image source: [Microsoft Learn {_ext}](https://learn.microsoft.com/en-us/azure/aks/concepts-clusters-workloads) |
-
+| Image source: [Microsoft Learn](https://learn.microsoft.com/en-us/azure/aks/concepts-clusters-workloads) |
 
 ### Azure Container Apps
 
-Azure Container Apps is a application platform based on Kubernetes and open-source technologies ([Dapr {_ext}](https://dapr.io/), [KEDA {_ext}](https://keda.sh/), [envoy {_ext}](https://www.envoyproxy.io/)) - it provides possibilities to deploy containers without managing orchestrator infrastructure. Unlike the Azure Container Instance You have access to Kubernetes features without direct access to Kubernetes API. 
+Azure Container Apps is a application platform based on Kubernetes and open-source technologies ([Dapr](https://dapr.io/), [KEDA](https://keda.sh/), [envoy](https://www.envoyproxy.io/)) - it provides possibilities to deploy containers without managing orchestrator infrastructure. Unlike the Azure Container Instance You have access to Kubernetes features without direct access to Kubernetes API.
 
 ### Azure App Service
 
-Azure App Service is a fully managed hosting for Your applications, it's optimized for websites and web applications. This service provides possibility to deploy app from code or container. 
+Azure App Service is a fully managed hosting for Your applications, it's optimized for websites and web applications. This service provides possibility to deploy app from code or container.
 
 ### Azure Container Registry
 
 Azure Container Registry (ACR) is a private Docker registry provided by Microsoft Azure. It allows to store, build and manage container images. ACR enables simplify of container lifecycle management by centralizing storage of private container images.
-
