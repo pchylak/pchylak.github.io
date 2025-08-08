@@ -28,7 +28,7 @@ Infrastructure as a Code series. In this series, I'll try to present all aspects
 
 # Tools
 
-* [Prepare Your environment](http://cloudinsights.blog/2022/03/26/iaac-environment-part1/)
+* [Prepare Your environment](https://cloudinsights.blog/blog/IaaC-environment-part1/)
 * [Bicep playground](https://bicepdemo.z22.web.core.windows.net/)
 
 # First template
