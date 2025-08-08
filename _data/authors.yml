@@ -1,0 +1,15 @@
+author1:
+  name:              Paweł Chylak
+  email:             p.chylak@it-spec.eu
+
+
+  about:             |
+    Text about the author, their interests, and what they do.
+
+  picture:
+    path:            /assets/img/Pawel_Chylak.png
+
+  social:
+    github:          pchylak
+    email:           p.chylak@it-spec.eu
+

@@ -1,2 +1,0 @@
-# CloudInsights.blog
-
